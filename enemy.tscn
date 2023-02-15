@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://db71yya4sy605"]
+
+[ext_resource type="Texture2D" uid="uid://dg0e3ustd2qmw" path="res://assets/images/enemy.png" id="1_pagm1"]
+
+[sub_resource type="GDScript" id="GDScript_gpxm8"]
+script/source = "extends CharacterBody2D
+
+@export var SPEED = 300.0
+
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+@onready var left_ray = $left_ray
+@onready var right_ray = $right_ray
+@onready var timer = $Timer
+
+enum State { IDLE, WALK }
+enum MovementState { LEFT, RIGHT }
+
+var state = State.IDLE
+var movement_state = MovementState.RIGHT
+
+var rng = RandomNumberGenerator.new()
+
+func _ready():
+	visible = false
+
+func _physics_process(delta):
+	if not is_on_floor():
+		velocity.y += gravity * delta
+		
+	if state == State.IDLE:
+		return
+
+	var direction = 1 if movement_state == MovementState.RIGHT else -1
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+	
+	if not left_ray.is_colliding() and movement_state == MovementState.LEFT:
+		movement_state = MovementState.RIGHT
+		
+	if not right_ray.is_colliding() and movement_state == MovementState.RIGHT:
+		movement_state = MovementState.LEFT
+		
+func spawn(x : float, y : float):
+	position = Vector2(x, y)	
+	state = State.IDLE
+	movement_state = MovementState.RIGHT
+	visible = true
+	var time = rng.randf_range(0, 3)
+	timer.start(time)
+
+func _on_timer_timeout():
+	if state == State.IDLE:
+		state = State.WALK
+	elif state == State.WALK:	
+		state = State.IDLE
+	
+	var time = rng.randf_range(0, 3)
+	timer.start(time)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30rmr"]
+size = Vector2(22, 34)
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = SubResource("GDScript_gpxm8")
+SPEED = 150.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 18)
+shape = SubResource("RectangleShape2D_30rmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pagm1")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 25, 35)
+
+[node name="left_ray" type="RayCast2D" parent="."]
+position = Vector2(0, 30)
+target_position = Vector2(0, 25)
+
+[node name="right_ray" type="RayCast2D" parent="."]
+position = Vector2(23, 30)
+target_position = Vector2(0, 25)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

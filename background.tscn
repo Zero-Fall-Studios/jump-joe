@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dskfefe1gkmb2"]
+
+[ext_resource type="Texture2D" uid="uid://tqk2ja22qjmv" path="res://assets/images/pixel_clear.jpg" id="1_kf4gh"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kf4gh")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 700, 500)

@@ -1,0 +1,10 @@
+res://main.tscn
+res://globals.gd
+res://enemy.tscn
+res://joe.tscn
+res://exit.tscn
+res://exit.gd
+res://ledge.gd
+res://main.gd
+res://pause.tscn
+res://pause.gd
