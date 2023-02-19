@@ -20,6 +20,8 @@ var pool_size = 20
 signal level_change(level_number)
 
 func _ready():
+	print("Globals Ready...")
+	
 	root = get_node("/root/Main/Level")
 	
 	joe = joe_template.instantiate()
@@ -31,9 +33,6 @@ func _ready():
 	bottom_ledge = ledge_template.instantiate()
 	root.add_child(bottom_ledge)
 	
-	var file = FileAccess.open(levels_data_file_name, FileAccess.READ)
-	json = JSON.parse_string(file.get_as_text())
-	
 	for i in pool_size:
 		var enemy = enemy_template.instantiate()
 		enemies.append(enemy)
@@ -41,14 +40,22 @@ func _ready():
 		var ledge = ledge_template.instantiate()
 		ledges.append(ledge)
 		root.add_child(ledge)
+		
+	var file = FileAccess.open(levels_data_file_name, FileAccess.READ)
+	json = JSON.parse_string(file.get_as_text())
 	
 func load():
+	print("Load level: ", level)
 	hide_actors()
 	build_level()
 	level_change.emit(level)
 	
 func next_level():
 	level += 1
+	Globals.load()
+	
+func prev_level():
+	level -= 1
 	Globals.load()
 	
 func restart_level():
@@ -60,13 +67,13 @@ func hide_actors():
 	bottom_ledge.visible = false
 	for i in pool_size:
 		var enemy = enemies[i]
-		enemy.visible = false
+		enemy.kill()
 		var ledge = ledges[i]
-		ledge.visible = false
+		ledge.kill()
 	
 func build_level():
 	bottom_ledge.spawn(0, 500, 700, 5)
-	if level >= len(json.jumpjoe.level):
+	if level < 0 or level >= len(json.jumpjoe.level):
 		return
 	
 	var items = json.jumpjoe.level[level].item

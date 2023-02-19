@@ -1,10 +1,8 @@
-res://main.tscn
-res://globals.gd
-res://enemy.tscn
 res://joe.tscn
-res://exit.tscn
-res://exit.gd
-res://ledge.gd
+res://enemy.tscn
+res://globals.gd
+res://main.tscn
 res://main.gd
-res://pause.tscn
+res://editor.gd
+res://addons/myplugin/myplugin.gd
 res://pause.gd

@@ -1,8 +1,8 @@
+Node
 Label
 CanvasLayer
 Timer
 RayCast2D
-Node
 Sprite2D
 CollisionShape2D
 CharacterBody2D

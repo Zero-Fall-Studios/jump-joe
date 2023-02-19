@@ -3,6 +3,7 @@ extends Node2D
 @onready var level_label = $CanvasLayer/Label
 
 func _ready():
+	print("Start Game...")
 	var callable = Callable(self, "_on_level_change")
 	Globals.level_change.connect(callable)
 	Globals.load()
@@ -14,6 +15,9 @@ func _unhandled_input(event: InputEvent):
 		Globals.restart_level()
 	elif event.is_action_pressed("next_level"):
 		Globals.next_level()
+	elif event.is_action_pressed("prev_level"):
+		Globals.prev_level()
 		
 func _on_level_change(level_number):
+	print("Level Change...", level_number)
 	level_label.text = "Level: " + str(level_number + 1)
