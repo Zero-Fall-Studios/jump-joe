@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx2nmdtblvpgi"]
+
+[ext_resource type="Texture2D" uid="uid://by5em5s8yu5br" path="res://assets/images/exit.jpg" id="1_aor4g"]
+[ext_resource type="Script" path="res://spawners/spawner.gd" id="2_ghlut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8mbg"]
+size = Vector2(30, 30)
+
+[node name="SpawnerExit" type="Area2D"]
+script = ExtResource("2_ghlut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aor4g")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, 15)
+shape = SubResource("RectangleShape2D_h8mbg")

@@ -1,0 +1,30 @@
+[
+	{
+		"_height": "35",
+		"_left": 97,
+		"_top": 433,
+		"_type": "joe",
+		"_width": "25"
+	},
+	{
+		"_height": "30",
+		"_left": 635,
+		"_top": 435,
+		"_type": "exit",
+		"_width": "30"
+	},
+	{
+		"_height": "35",
+		"_left": 480,
+		"_top": 329,
+		"_type": "enemy",
+		"_width": "25"
+	},
+	{
+		"_height": 5,
+		"_left": 447,
+		"_top": 378.5,
+		"_type": "ledge",
+		"_width": 100
+	}
+]

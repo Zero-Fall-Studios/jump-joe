@@ -1,0 +1,45 @@
+[
+    {
+      "_type": "joe",
+      "_width": "25",
+      "_height": "35",
+      "_left": "10",
+      "_top": "10"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "10",
+      "_top": "50"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "300",
+      "_top": "50"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "595",
+      "_top": "50"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "50",
+      "_top": "460",
+      "_ledge": "-1"
+    },
+    {
+      "_type": "exit",
+      "_width": "30",
+      "_height": "30",
+      "_left": "10",
+      "_top": "400"
+    }
+  ]

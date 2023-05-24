@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://blc8ot4v5r0tc"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_adnay"]
+[ext_resource type="Texture2D" uid="uid://bqua4w373p3cx" path="res://assets/images/title.jpg" id="2_myvmq"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_adnay")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Sprite2D" parent="CenterContainer/VBoxContainer"]
+position = Vector2(57, -58)
+texture = ExtResource("2_myvmq")
+
+[node name="StartGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="EditorButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Editor"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/EditorButton" to="." method="_on_editor_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

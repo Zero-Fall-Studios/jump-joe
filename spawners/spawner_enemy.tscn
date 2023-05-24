@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://p1isxwyyh2nl"]
+
+[ext_resource type="Texture2D" uid="uid://dg0e3ustd2qmw" path="res://assets/images/enemy.png" id="1_den7n"]
+[ext_resource type="Script" path="res://spawners/spawner.gd" id="2_12mpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqssw"]
+size = Vector2(24, 36)
+
+[node name="SpawnerEnemy" type="Area2D"]
+script = ExtResource("2_12mpf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_den7n")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 18)
+shape = SubResource("RectangleShape2D_mqssw")

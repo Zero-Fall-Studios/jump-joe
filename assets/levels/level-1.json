@@ -1,0 +1,107 @@
+[
+	{
+		"_height": "35",
+		"_left": 72,
+		"_top": 378,
+		"_type": "joe",
+		"_width": "25"
+	},
+	{
+		"_height": "30",
+		"_left": 50,
+		"_top": 10,
+		"_type": "exit",
+		"_width": "30"
+	},
+	{
+		"_height": "35",
+		"_left": 100,
+		"_top": 265,
+		"_type": "enemy",
+		"_width": "25"
+	},
+	{
+		"_height": 5,
+		"_left": 50,
+		"_top": 450,
+		"_type": "ledge",
+		"_width": 100
+	},
+	{
+		"_height": "35",
+		"_left": 400,
+		"_top": 165,
+		"_type": "enemy",
+		"_width": "25"
+	},
+	{
+		"_height": 5,
+		"_left": 265,
+		"_top": 420,
+		"_type": "ledge",
+		"_width": 100
+	},
+	{
+		"_height": "35",
+		"_left": 550,
+		"_top": 65,
+		"_type": "enemy",
+		"_width": "25"
+	},
+	{
+		"_height": 5,
+		"_left": 465,
+		"_top": 390,
+		"_type": "ledge",
+		"_width": 100
+	},
+	{
+		"_height": 5,
+		"_left": 590,
+		"_top": 340,
+		"_type": "ledge",
+		"_width": 100
+	},
+	{
+		"_height": 5,
+		"_left": 90,
+		"_top": 300,
+		"_type": "ledge",
+		"_width": 400
+	},
+	{
+		"_height": 5,
+		"_left": 10,
+		"_top": 250,
+		"_type": "ledge",
+		"_width": 50
+	},
+	{
+		"_height": 5,
+		"_left": 90,
+		"_top": 200,
+		"_type": "ledge",
+		"_width": 400
+	},
+	{
+		"_height": 5,
+		"_left": 500,
+		"_top": 150,
+		"_type": "ledge",
+		"_width": 150
+	},
+	{
+		"_height": 5,
+		"_left": 500,
+		"_top": 100,
+		"_type": "ledge",
+		"_width": 150
+	},
+	{
+		"_height": 5,
+		"_left": 90,
+		"_top": 50,
+		"_type": "ledge",
+		"_width": 400
+	}
+]

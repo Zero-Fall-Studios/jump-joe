@@ -1,0 +1,176 @@
+[
+    {
+      "_type": "joe",
+      "_width": "25",
+      "_height": "35",
+      "_left": "10",
+      "_top": "460"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "50",
+      "_top": "450"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "50",
+      "_top": "400"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "300",
+      "_top": "450"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "300",
+      "_top": "400"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "550",
+      "_top": "450"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "550",
+      "_top": "400"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "175",
+      "_top": "350"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "150",
+      "_top": "300"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "375",
+      "_top": "350"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "350",
+      "_top": "300"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "75",
+      "_top": "150"
+    },
+    {
+      "_type": "ledge",
+      "_width": "500",
+      "_height": "5",
+      "_left": "50",
+      "_top": "100"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "475",
+      "_top": "250"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "50",
+      "_top": "200"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "300",
+      "_top": "250"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "550",
+      "_top": "250"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "400",
+      "_top": "460",
+      "_ledge": "-1"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "400",
+      "_top": "315",
+      "_ledge": "6"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "400",
+      "_top": "65",
+      "_ledge": "11"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "70",
+      "_top": "165",
+      "_ledge": "7"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "70",
+      "_top": "365",
+      "_ledge": "0"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "310",
+      "_top": "365",
+      "_ledge": "3"
+    },
+    {
+      "_type": "exit",
+      "_width": "30",
+      "_height": "30",
+      "_left": "600",
+      "_top": "10"
+    }
+  ]

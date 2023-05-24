@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dok3gaxmu7nsj"]
+
+[ext_resource type="Texture2D" uid="uid://brp8jaiw4ui0g" path="res://assets/images/joe.png" id="1_081tg"]
+[ext_resource type="Script" path="res://spawners/spawner.gd" id="2_splgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybupt"]
+size = Vector2(24, 36)
+
+[node name="SpawnerJoe" type="Area2D"]
+script = ExtResource("2_splgc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_081tg")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 18)
+shape = SubResource("RectangleShape2D_ybupt")

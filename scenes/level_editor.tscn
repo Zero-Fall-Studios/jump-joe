@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://beg6sjq2ur0mf"]
+
+[ext_resource type="Script" path="res://scenes/level_editor.gd" id="1_pwp7c"]
+[ext_resource type="PackedScene" uid="uid://dskfefe1gkmb2" path="res://scenes/background.tscn" id="2_0gjur"]
+[ext_resource type="PackedScene" uid="uid://bmvp3e5xv1e31" path="res://scenes/level_select.tscn" id="3_8rtwl"]
+[ext_resource type="PackedScene" uid="uid://din0vf7nk6nd4" path="res://scenes/toast.tscn" id="4_5yoq4"]
+
+[node name="level_editor" type="Node2D"]
+script = ExtResource("1_pwp7c")
+
+[node name="Background" parent="." instance=ExtResource("2_0gjur")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Level" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelSelect" parent="CanvasLayer" instance=ExtResource("3_8rtwl")]
+visible = false
+
+[node name="EditorControls" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 2.0
+offset_right = 362.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="JoeBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Joe"
+
+[node name="ExitBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Exit"
+
+[node name="LedgeBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ledge"
+
+[node name="EnemyBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enemy"
+
+[node name="SaveBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="LevelSelectBtn" type="Button" parent="CanvasLayer/EditorControls"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level Select"
+
+[node name="Toast" parent="." instance=ExtResource("4_5yoq4")]
+
+[connection signal="pressed" from="CanvasLayer/EditorControls/JoeBtn" to="." method="_on_joe_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/EditorControls/ExitBtn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/EditorControls/LedgeBtn" to="." method="_on_ledge_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/EditorControls/EnemyBtn" to="." method="_on_enemy_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/EditorControls/SaveBtn" to="." method="_on_save_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/EditorControls/LevelSelectBtn" to="." method="_on_level_select_btn_pressed"]

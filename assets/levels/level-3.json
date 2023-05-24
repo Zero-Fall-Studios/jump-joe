@@ -1,0 +1,117 @@
+[
+    {
+      "_type": "joe",
+      "_width": "25",
+      "_height": "35",
+      "_left": "60",
+      "_top": "10"
+    },
+    {
+      "_type": "ledge",
+      "_width": "100",
+      "_height": "5",
+      "_left": "10",
+      "_top": "50"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "450",
+      "_top": "50"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "5",
+      "_top": "250"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "150",
+      "_top": "350"
+    },
+    {
+      "_type": "ledge",
+      "_width": "200",
+      "_height": "5",
+      "_left": "350",
+      "_top": "450"
+    },
+    {
+      "_type": "ledge",
+      "_width": "150",
+      "_height": "5",
+      "_left": "500",
+      "_top": "350"
+    },
+    {
+      "_type": "ledge",
+      "_width": "50",
+      "_height": "5",
+      "_left": "550",
+      "_top": "300"
+    },
+    {
+      "_type": "ledge",
+      "_width": "50",
+      "_height": "5",
+      "_left": "550",
+      "_top": "250"
+    },
+    {
+      "_type": "ledge",
+      "_width": "50",
+      "_height": "5",
+      "_left": "550",
+      "_top": "200"
+    },
+    {
+      "_type": "ledge",
+      "_width": "50",
+      "_height": "5",
+      "_left": "550",
+      "_top": "150"
+    },
+    {
+      "_type": "ledge",
+      "_width": "50",
+      "_height": "5",
+      "_left": "550",
+      "_top": "100"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "400",
+      "_top": "460",
+      "_ledge": "-1"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "500",
+      "_top": "315",
+      "_ledge": "5"
+    },
+    {
+      "_type": "enemy",
+      "_width": "25",
+      "_height": "35",
+      "_left": "500",
+      "_top": "15",
+      "_ledge": "1"
+    },
+    {
+      "_type": "exit",
+      "_width": "30",
+      "_height": "30",
+      "_left": "350",
+      "_top": "10"
+    }
+  ]
