@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://djgx246o2lbcy"]
+
+[ext_resource type="Script" path="res://actors/fake_ledge.gd" id="1_fhjih"]
+[ext_resource type="Texture2D" uid="uid://bouui1rwrgxwc" path="res://assets/images/pixel_black.jpg" id="2_26oaj"]
+
+[node name="FakeLedge" type="StaticBody2D" groups=["ledge"]]
+script = ExtResource("1_fhjih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_26oaj")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 2)

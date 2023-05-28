@@ -10,12 +10,13 @@ var center : Vector2
 func _ready():
 	visible = false
 	selected = false
-	collision_shape.shape = RectangleShape2D.new()
+	if collision_shape:
+		collision_shape.shape = RectangleShape2D.new()
 	var _on_input_event = Callable(self, "_on_input_event")
 	connect("input_event", _on_input_event)
 		
 func _on_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click"):if collision_shape:
 		selected = true	
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 		

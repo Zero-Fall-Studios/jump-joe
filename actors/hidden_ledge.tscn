@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://0m2hadphc86f"]
+
+[ext_resource type="Script" path="res://actors/hidden_ledge.gd" id="1_bmjgr"]
+[ext_resource type="Texture2D" uid="uid://bouui1rwrgxwc" path="res://assets/images/pixel_black.jpg" id="2_ord7r"]
+
+[node name="HiddenLedge" type="StaticBody2D" groups=["ledge"]]
+script = ExtResource("1_bmjgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 1)
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ord7r")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 2)

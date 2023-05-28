@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://3fsfhfbxvs5s"]
+
+[ext_resource type="Script" path="res://spawners/spawner.gd" id="1_u1cac"]
+[ext_resource type="Texture2D" uid="uid://yl1tucuai05x" path="res://assets/images/pixel_white.jpg" id="2_jg0gf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8r6u"]
+
+[node name="SpawnerHiddenLedge" type="Area2D"]
+script = ExtResource("1_u1cac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
+modulate = Color(0.4, 0.65098, 1, 1)
+texture = ExtResource("2_jg0gf")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s8r6u")
