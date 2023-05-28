@@ -1,3 +1,4 @@
+Timer
 Button
 Label
 CenterContainer
@@ -18,7 +19,6 @@ Area2D
 Sprite2D
 StaticBody2D
 Node
-Timer
 RayCast2D
 CharacterBody2D
 Camera2D

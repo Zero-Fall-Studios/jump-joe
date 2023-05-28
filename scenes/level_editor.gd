@@ -42,10 +42,13 @@ func instantiate_actors():
 		var enemy = enemy_template.instantiate()
 		enemies.append(enemy)
 		var ledge = ledge_template.instantiate()
+		ledge.can_expand = true
 		ledges.append(ledge)
 		var fake_ledge = fake_ledge_template.instantiate()
+		fake_ledge.can_expand = true
 		fake_ledges.append(fake_ledge)
 		var hidden_ledge = hidden_ledge_template.instantiate()
+		hidden_ledge.can_expand = true
 		hidden_ledges.append(hidden_ledge)
 	
 func _on_level_selected(name : String):

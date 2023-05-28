@@ -6,7 +6,6 @@ class_name Toast
 
 func _ready():
 	container.hide()
-#	show_toast("Hello")
 
 func show_toast(message: String, duration: float = 2.0):
 	toast_label.text = message

@@ -19,6 +19,7 @@ anchor_mode = 0
 
 [node name="LevelSelect" parent="CanvasLayer" instance=ExtResource("3_8rtwl")]
 visible = false
+mouse_filter = 2
 
 [node name="EditorControls" type="HBoxContainer" parent="CanvasLayer"]
 offset_left = 2.0

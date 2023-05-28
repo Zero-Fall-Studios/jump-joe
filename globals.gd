@@ -57,11 +57,15 @@ func load_level():
 func next_level():
 	if not loading_level:
 		level += 1
+		if level > 10:
+			level = 1
 		load_level()
 	
 func prev_level():
 	if not loading_level:
 		level -= 1
+		if level < 1:
+			level = 10
 		load_level()
 	
 func restart_level():
@@ -90,9 +94,11 @@ func spawn_joe(pos : Vector2):
 	root.add_child(joe)
 	joe.spawn(pos.x, pos.y, 24, 36)
 		
-func spawn_exit(pos : Vector2):
+func spawn_exit(pos : Vector2, random: bool):
 	root.add_child(exit)
 	exit.spawn(pos.x, pos.y, 30, 30)
+	if random:
+		exit.random()
 	
 func spawn_ledge(pos : Vector2, size : Vector2):
 	var ledge = ledges[ledge_index]
@@ -144,5 +150,8 @@ func build_level():
 		elif item._type == 'hidden':
 			spawn_hidden_ledge(Vector2(float(item._left), float(item._top)), Vector2(float(item._width), float(item._height)))
 		elif item._type == 'exit':
-			spawn_exit(Vector2(float(item._left), float(item._top)))
+			if "_random" in item:
+				spawn_exit(Vector2(float(item._left), float(item._top)), true)
+			else:
+				spawn_exit(Vector2(float(item._left), float(item._top)), false)
 	
